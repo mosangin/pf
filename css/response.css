@@ -1,0 +1,68 @@
+@media (max-width: 1024px){
+    #portfolio .port_wrap .port .title .text_area span{font-size: 14px;}
+}
+
+@media screen and (max-width: 767px){
+    header .inner{width: 100%; height:100%; margin: 0 auto; position: relative;}
+    header nav{width: 44px; height: 40px; margin: 10px 10px;}
+    header nav .fas{font-size: 40px; display: block; color: #0A174E;}
+    header .var{width: 100%; background: rgba(24, 24, 24, 0.9); position: absolute; top: 60px;}
+    header .var ul li{height: 50px; line-height:50px; width: 100%; text-align: center;}
+    header .var ul li:hover{background: #777;}
+    header .var ul li a{color: #fff; font-size: 16px; font-weight: bold;}
+    header nav ul{display: none;}
+    #banner .text strong{font-size: 65px;}
+    /* 콘텐츠 */
+    #profile{height: 1050px;}
+    #profile .con1{width: 70%; padding-top: 45px;}
+    #profile .con1 .about{padding: 10px 0;}
+    #profile .con1 .profile{width: 70%; height: 100%; margin: 0 auto; float: none;} 
+    #profile .con1 .profile img{width: 100%; height: 100%;}
+    #profile .con1 .text{padding-left: 0; margin-top: 15px; text-align: center; width: 100%; }
+    /* 스킬 */
+    #skill .con2 .skill_inner{width: 95%;}
+    #skill .con2 .skill_inner .skill_box{width:50%; margin-top: 30px;}
+    #skill .con2 .skill_inner .skill_box .sk .info p{font-size: 14px;}
+    /* 포트폴리오 */
+    #portfolio{margin-top: 100px;}
+    #portfolio .con3{width: 100%;}
+    #portfolio .port_wrap{justify-content: center;}
+    #portfolio .port_wrap .port{width: 70%;}
+    #portfolio .port_wrap .port .title .text_area h4{font-size: 30px;}
+    #portfolio .port_wrap .port .title .text_area span{font-size: 15px;}
+    #portfolio .port_wrap .port .title .text_area a{font-size: 14px;}
+    /* 연락처 */
+    #contact .con4{width: 50%;}
+    #contact .con4 .contact_inner{width: 100%;}
+}
+
+
+@media screen and (max-width: 479px){
+    header h2{width: 130px;}
+    header h2 a{font-size: 20px;}
+    /* 배너 */
+    #banner{height: 600px;}
+    #banner .text strong{font-size: 50px;}
+    #banner .text p{font-size: 18px;}
+    /* 프로필 */
+    #profile .con1{width: 80%;}
+    #profile .con1 .about p{font-size: 14px;}
+    #profile .con1 .text{margin-top: 35px;}
+    #profile .con1 .text p{display: block;}
+    /* 스킬 */
+    #skill .con2 .skill_inner .skill_box .sk .info p{font-size: 13px;}
+    #skill .con2 .skill_inner .skill_box .sk .info .m_block{display: block;}
+    /* 포트폴리오 */
+    #portfolio .port_wrap{flex-direction: column;}
+    #portfolio .port_wrap .port{width: 90%; margin: 0 auto; margin-bottom: 30px;}
+    /* 연락처 */
+    #contact{height: 550px;}
+    #contact .con4{width: 90%;}
+    #contact .con4 p{font-size: 21px;}
+    #contact .con4 .contact_inner{height: auto;}
+    #contact .con4 .contact_inner ul li{margin-top: 10px;}
+    #contact .con4 .contact_inner ul li span{font-size: 17px;}
+    #footer p{font-size: 12px;}
+    /* top */
+    aside div{width: 35px; height: 35px; }
+}
