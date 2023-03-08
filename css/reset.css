@@ -3,7 +3,7 @@
 /* 초기화 스타일 reset.css */
 * { padding:0; margin:0; }
 html, body { width:100%; height:100%; }
-html { overflow-y:scroll; }
+html { overflow-y:scroll; font-size: 10px;}
 body { font:normal 14px/1 'Nanum Gothic','sans-serif';  -webkit-text-size-adjust:100%; text-size-adjust:100%; word-wrap:break-word; }
 header,main,footer,section,article,nav,aside { display:block; }
 h1,h2,h3,h4,h5,h6 { font-size:14px; font-weight:normal; }
