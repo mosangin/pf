@@ -22,11 +22,12 @@ window.addEventListener("DOMContentLoaded", () => {
       .to(
         rect,
         {
+          opacity: 1,
           x: "105%",
           duration: 1,
           ease: "power4.out",
         },
-        "-=55%"
+        "-=45%"
       );
     return tl;
   }
@@ -34,13 +35,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //스크롤시 header
 $(function () {
-  var shrinkHeader = 300;
+  var fixedHeader = 300;
   $(window).scroll(function () {
     var scroll = getCurrentScroll();
-    if (scroll >= shrinkHeader) {
-      $("#header").addClass("active");
+    if (scroll >= fixedHeader) {
+      $(".header").addClass("active");
     } else {
-      $("#header").removeClass("active");
+      $(".header").removeClass("active");
     }
   });
   function getCurrentScroll() {
