@@ -1,22 +1,23 @@
 // 로딩 mask , visual 텍스트 효과
     window.addEventListener("DOMContentLoaded", () => {
         $('.mask').addClass('on');
-        setTimeout(function(){
+        setTimeout(() => {
+            $('.word').addClass('on');
+        }, 500);
+        setTimeout(() => {
             $('.mask').addClass('hidden');
+            $('.word').addClass('on');
         }, 800);
-        const tl = gsap.timeline({
-            repeat: 0,
-        });
+        const visualTimeLine = gsap.timeline({ repeat: 1,});
 
         document.querySelectorAll(".word").forEach((word) => {
-            tl.add(txtRectMotion(word), "-=90%"); // 동시에 작동
+            visualTimeLine.add(txtRectMotion(word), "-=90%"); // add  동시에 작동
         });
 
         function txtRectMotion(element) {
             const rect = element.querySelector(".rect");
-            const tl = gsap
-            .timeline()
-            .from(element, {
+            const tl = gsap.timeline();
+            tl.from(element, {
                 y: 16,
                 opacity: 0,
                 duration: 0.75,
@@ -30,12 +31,12 @@
                 duration: 1,
                 ease: "power4.out",
                 },
-                "-=50%"
-            );
+                "-=50%" //직전 rect 50% 경과시 실행됨.
+            )
             return tl;
         }
     });
-
+    gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.matchMedia({
         "(min-width:1024px)": function () {
             gsap.to(".one1",{
@@ -57,6 +58,17 @@
                     // markers: true,
                 },
                 xPercent:-25
+            });
+            gsap.to("body",{
+                scrollTrigger:{
+                    trigger:".profile",
+                    start:"top 50%", 
+                    end:"bottom bottom",
+                    scrub: 1,
+                    backgroundColor: "#333333",
+                    markers: true,
+                },
+                
             });
         }
     });  
