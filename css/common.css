@@ -15,3 +15,13 @@
     font-style: normal;
 }
 
+/* 메인 mask 애니메이션*/
+@keyframes mask {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-130%);
+    }
+}

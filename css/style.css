@@ -4,7 +4,21 @@
 .up-on-scroll {
   transition: transform 1s, opacity 1.5s;
 }
-
+/* 로딩 */
+.mask{
+  position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+}
+.mask.on{
+  animation: mask both ease-out 0.9s 0.1s;
+}
+.mask.hidden{
+  display: none;
+}
 /* 헤더 */
 header {
   position: fixed;
@@ -86,12 +100,30 @@ header nav ul li a:hover:after {
 }
 .visual .one{
   position: absolute;
-  left: 0;
-  bottom: -50%;
-  width: 900px;
-  height: 900px;
-  background: #5B3B69;
   box-shadow: 1px 1px 6px rgba(0,0,0,.5);
+  border-radius: 50%;
+  opacity: .2;
+  z-index: 1;
+}
+.visual .one1{
+  left: 0;
+  top: 0%;
+  width: 600px;
+  height: 600px;
+  background: #5B3B69;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, .5);
+  border-radius: 50%;
+  opacity: .2;
+  z-index: 1;
+}
+.visual .one2 {
+  right: -300px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 800px;
+  height: 800px;
+  background: #5B3B69;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, .5);
   border-radius: 50%;
   opacity: .2;
   z-index: 1;
@@ -118,7 +150,8 @@ header nav ul li a:hover:after {
   letter-spacing: -3px;
   line-height: 1;
   font-weight: 900;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 1px 4px 3px rgba(0,0,0,.5);
 }
 .visual .inner .visual_txtbox .visual_txt .word2{
   color: #3f7289;

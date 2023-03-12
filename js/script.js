@@ -1,37 +1,4 @@
-// visual 텍스트 효과
-window.addEventListener("DOMContentLoaded", () => {
-  const tl = gsap.timeline({
-    repeat: 1,
-  });
 
-  document.querySelectorAll(".word").forEach((word) => {
-    tl.add(txtRectMotion(word), "-=90%"); // 동시에 작동
-  });
-
-  function txtRectMotion(element) {
-    const rect = element.querySelector(".rect");
-    const tl = gsap
-      .timeline()
-      .from(element, {
-        y: 16,
-        opacity: 0,
-        duration: 0.75,
-        ease: "power4.out",
-      })
-      .set(rect, { opacity: 0 })
-      .to(
-        rect,
-        {
-          opacity: 1,
-          x: "105%",
-          duration: 1,
-          ease: "power4.out",
-        },
-        "-=45%"
-      );
-    return tl;
-  }
-});
 
 //스크롤시 header
 $(function () {
@@ -109,12 +76,5 @@ $(".scroll a").click(function () {
 
 //스크롤할때 자연스럽게
 AOS.init();
-AOS.init({
-  offset: 300,
-  delay: 0,
-  duration: 400,
-  easing: "ease",
-  once: false,
-  mirror: false,
-  anchorPlacement: "top-bottom",
-});
+
+
