@@ -59,11 +59,13 @@
                 },
                 xPercent:-25
             });
-            gsap.to("body",{
+            gsap.to(".bg", {
+                autoAlpha: 1,
+		        ease: 'power1.in',
                 scrollTrigger:{
                     trigger:".profile",
-                    start:"top 50%", 
-                    end:"bottom bottom",
+                    start: 'bottom bottom',
+                    end: 'bottom 100px',
                     scrub: 1,
                     backgroundColor: "#333333",
                     markers: true,

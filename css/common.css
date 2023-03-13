@@ -25,3 +25,9 @@
         transform: translateY(-130%);
     }
 }
+
+.inner{
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 105px 0;
+}
