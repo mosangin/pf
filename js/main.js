@@ -52,25 +52,43 @@
             gsap.to(".one2",{
                 scrollTrigger:{
                     trigger:".visual",
-                    start:"top top", 
-                    end:"bottom center",
+                    start:"top 50%", 
+                    end:"bottom top",
                     scrub:1,
                     // markers: true,
                 },
-                xPercent:-25
+                width: '800px',
+                height: '800px',
             });
-            gsap.to(".bg", {
-                autoAlpha: 1,
-		        ease: 'power1.in',
+
+            // gsap.to(".about .txt_line p",{
+            //     scrollTrigger:{
+            //         trigger: ".profile",
+            //         toggleClass:{targets:'.txt_line p',className:'active'},
+            //         start:"top 60%", 
+            //         markers: true,
+            //     },
+            // });
+            const aboutBg =  gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.profile',
+                    start: 'top 50%',
+                    end:"bottom bottom",
+                },
+            });
+            aboutBg
+            .set('.about .txt_bg', { duration: 1, x: '-100%' })
+            .to('.about .txt_bg',{duration: 1, x: 0})
+            
+            gsap.to(".about .txt_line p",{
                 scrollTrigger:{
-                    trigger:".profile",
-                    start: 'bottom bottom',
-                    end: 'bottom 100px',
+                    trigger: ".profile",
+                    toggleClass: { targets: '.txt_line p', className: 'active'},
                     scrub: 1,
-                    backgroundColor: "#333333",
+                    start: "top 60%", 
                     markers: true,
                 },
-                
             });
         }
+        
     });  
