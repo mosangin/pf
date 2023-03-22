@@ -277,10 +277,13 @@ header nav ul li a {
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-	width: 8px;
-	height: 8px;
-	background: #1a1a1a;
+	width: 6px;
+	height: 6px;
+	background: #39594f;
 	border-radius: 50%;
+}
+.profile .info .area .history ul li p:last-child:before{
+	display: none;
 }
 /* 스킬 */
 .profile .info .area .skill{
@@ -305,23 +308,8 @@ header nav ul li a {
 .portfolio{
 	overflow: hidden;
 	position: relative;
-	background: url(../img/pf_bg.jpg) no-repeat 50% 50%;
-	background-size: cover;
-	background-attachment: fixed;
-	height: 800px;
+	background: #fff;
 	height: 100vh;
-}
-.portfolio::before{
-	content: '';
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,.8);
 }
 .portfolio .inner{
 	display: flex;
@@ -332,43 +320,37 @@ header nav ul li a {
 .portfolio .txt_box{
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-	flex: 0 0 auto;
-	white-space: nowrap;
-	z-index: 1;
+	justify-content: center;
+	height: 100%;
 }
-
-.portfolio .txt_box p{
-	padding: 0 40px;
+.portfolio .txt_box span{
+	position: absolute;
+	color: #e0e0e0;
+	opacity: 0.2;
 	font-size: 280px;
-		font-size: 10.42vw;
-	line-height: 1.4;
-	color: transparent;
-	font-family: "S-CoreDream-5Medium";
-	text-stroke: 1px #fff;
-	-webkit-text-stroke: 1px #fff;
-	animation: rollmove 10s infinite;
-	animation-timing-function: cubic-bezier( 1,1,1,1 );
-		flex-shrink: 0;
+	letter-spacing: -1px;
+	font-weight: 900;
+	font-family: 'NanumSquare';
 }
-@keyframes rollmove {
-	0% {
-		transform: translate(0, 0);
-	}
-
-	100% {
-		transform: translate(-100%, 0);
-	}
+.portfolio .txt_box .bg_txt1{
+	top: 5%;
+	left: -5%;
+}
+.portfolio .txt_box .bg_txt2{
+	right: -5%;
+	/* bottom: 12%; */
+	top: 43%;
 }
 .portfolio a{
 	display: block;
 	padding-top: 60px;
+	border-bottom: 2px solid #1a1a1a;
 	font-size: 28px;
 	line-height: 1.4;
-	color: #fff;
+	color: #1a1a1a;
 	text-align: center;
 	font-family: "S-CoreDream-3Light";
-	border-bottom: 2px solid #fff;
+	z-index: 1;
 }
 /* 연락처*/
 .contact {

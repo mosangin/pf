@@ -61,14 +61,6 @@
                 height: '800px',
             });
 
-            // gsap.to(".about .txt_line p",{
-            //     scrollTrigger:{
-            //         trigger: ".profile",
-            //         toggleClass:{targets:'.txt_line p',className:'active'},
-            //         start:"top 60%", 
-            //         markers: true,
-            //     },
-            // });
             const aboutBg =  gsap.timeline({
                 scrollTrigger: {
                     trigger: '.profile',
@@ -86,8 +78,28 @@
                     toggleClass: { targets: '.txt_line p', className: 'active'},
                     scrub: 1,
                     start: "top 60%", 
+                },
+            });
+
+            // 포트폴리오 백그라운드 텍스트
+            gsap.to(".portfolio .txt_box .bg_txt1",{
+                scrollTrigger:{
+                    trigger: ".portfolio",
+                    scrub: 1,
+                    start: "top 60%", 
                     markers: true,
                 },
+                xPercent: 20
+            });
+
+             gsap.to(".portfolio .txt_box .bg_txt2",{
+                scrollTrigger:{
+                    trigger: ".portfolio",
+                    scrub: 1,
+                    start: "top 60%", 
+                    markers: true,
+                },
+                xPercent: -20
             });
         }
         
