@@ -72,6 +72,16 @@
             .set('.about .txt_bg', { duration: 1, x: '-100%' })
             .to('.about .txt_bg',{duration: 1, x: 0})
             
+            gsap.to(".about .txt_bg",{
+                scrollTrigger:{
+                    trigger: ".portfolio",
+                    scrub: 1,
+                    start: "top 70%", 
+                    toggleClass: { targets: '.about .txt_bg', className: 'bdRadius'},
+                    markers: true,
+                },
+            });
+
             gsap.to(".about .txt_line p",{
                 scrollTrigger:{
                     trigger: ".profile",
@@ -80,24 +90,21 @@
                     start: "top 60%", 
                 },
             });
-
             // 포트폴리오 백그라운드 텍스트
             gsap.to(".portfolio .txt_box .bg_txt1",{
                 scrollTrigger:{
                     trigger: ".portfolio",
                     scrub: 1,
                     start: "top 60%", 
-                    markers: true,
                 },
                 xPercent: 20
             });
 
-             gsap.to(".portfolio .txt_box .bg_txt2",{
+            gsap.to(".portfolio .txt_box .bg_txt2",{
                 scrollTrigger:{
                     trigger: ".portfolio",
                     scrub: 1,
                     start: "top 60%", 
-                    markers: true,
                 },
                 xPercent: -20
             });

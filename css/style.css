@@ -202,6 +202,10 @@ header nav ul li a {
 	height: 100%;
 	background: #39594f;
 	transform: translateX(-100%);
+	transition: border-radius .9s;
+}
+.profile .about .txt_bg.bdRadius{
+	border-radius: 0 0 350px 0;
 }
 .profile .about .txt_box{
 	position: relative;
@@ -328,9 +332,9 @@ header nav ul li a {
 	color: #e0e0e0;
 	opacity: 0.2;
 	font-size: 280px;
-	letter-spacing: -1px;
-	font-weight: 900;
-	font-family: 'NanumSquare';
+	letter-spacing: -7px;
+	font-weight: 700;
+	font-family: 'Pretendard';
 }
 .portfolio .txt_box .bg_txt1{
 	top: 5%;
@@ -343,11 +347,16 @@ header nav ul li a {
 }
 .portfolio a{
 	display: block;
-	padding-top: 60px;
+	position: absolute;
+	top: 83%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	border-bottom: 2px solid #1a1a1a;
-	font-size: 28px;
+	font-size: 52px;
 	line-height: 1.4;
-	color: #1a1a1a;
+	color: transparent;
+	text-stroke: 1px #000;
+	-webkit-text-stroke: 1px #000;
 	text-align: center;
 	font-family: "S-CoreDream-3Light";
 	z-index: 1;
