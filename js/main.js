@@ -108,6 +108,17 @@
                 },
                 xPercent: -20
             });
+
+            gsap.to(".portfolio .moreBtn", {
+                backgroundPositionX: '0%',
+                stagger: 0.5,
+                scrollTrigger:{
+                    trigger: ".portfolio",
+                    scrub: 1,
+                    start: "top 50%",
+                    end: "bottom bottom"
+                },
+            });
         }
         
     });  
