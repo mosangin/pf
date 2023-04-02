@@ -30,10 +30,9 @@ header {
 }
 
 header.active{
-	background: #454545;
 }
 
-header .inner {
+header .header_inner {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -59,11 +58,12 @@ header .var {
 	display: none;
 }
 header nav {
-	width: 18%;
+
 }
 header nav ul {
 	display: flex;
 	justify-content: space-between;
+	gap: 0 40px;
 }
 
 header nav ul li {
@@ -129,7 +129,7 @@ header nav ul li a {
 	display: none;
 	overflow: hidden;
 	position: relative;
-	font-size: 9vw;
+	font-size: 170px;
 	color: rgba(65,65,65);
 	letter-spacing: -3px;
 	letter-spacing: -6px;
@@ -186,6 +186,7 @@ header nav ul li a {
 }
 /* 프로필 */
 .profile {
+	overflow: hidden;
 	display: flex;
 }
 .profile .about{
@@ -212,10 +213,6 @@ header nav ul li a {
 	position: relative;
 	padding: 140px 0 140px 15%;
 	z-index: 1;
-}
-.profile .about .txt_line{
-	overflow: hidden;
-	position: relative;
 }
 .profile .about .txt_line p{
 	font-size: 40px;
@@ -391,90 +388,72 @@ header nav ul li a {
 .goal{
 	padding: 160px 0;
 }
+.goal .inner{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 .goal h2{
+	position: sticky;
+	top: 120px;
+	align-self: flex-start;
 	font-size: 52px;
 	color: #39594f;
 	letter-spacing: -1px;
 	font-family: "S-CoreDream-5Medium";
 	text-align: center;
 }
-.goal .list{
-	width: 80%;
-	margin: 0 auto;
+.goal .list_box{
+	width: 65%;
+}
+.goal .list_box .list{
+	
+}
+.goal .list_box .list2{
 	padding-top: 120px;
 }
-.goal .list li{
+.goal .list_box .list li{
 	position: relative;
 	padding-left: 5px;
 	font-size: 24px;
 	line-height: 2;
 	color: #1a1a1a;
+	word-break: keep-all;
 	font-family: "S-CoreDream-3Light";
 	list-style: disc;
 }
-.goal .list li::marker{
+.goal .list_box .list li::marker{
 	color: #39594f;
 	font-size: 16px;
+	font-family: "S-CoreDream-6Bold";
 }
 
 
 /* 연락처*/
 .contact {
-	width: 100%;
-	height: 680px;
-	background: url(../img/contac.png) no-repeat center center / cover;
-	background-attachment: fixed;
-	font-family: "S-CoreDream-5Medium";
+	padding: 160px 0;
+	background: #39594f;
 }
-
-.contact .con4 {
-	width: 35%;
-	margin: 0 auto;
-}
-
-.contact .con4 h2 {
-	font-size: 40px;
-	padding-top: 50px;
-	margin: 0 auto;
-	border-bottom: 4px solid #d78fa3;
-	width: 183px;
-}
-
-.contact .con4 .contact_inner {
-	width: 100%;
-	margin: 0 auto;
-	background: rgba(0, 0, 0, 0.7);
-	margin-top: 22%;
-	margin-bottom: 40px;
-	font-family: "S-CoreDream-3Light";
-}
-
-.contact .con4 .contact_inner ul {
-	padding: 7%;
-}
-
-.contact .con4 .contact_inner ul li {
-	text-align: center;
-	margin-top: 5px;
-}
-
-.contact .con4 .contact_inner ul li span {
-	display: block;
+.contact h2{
+	font-size: 60px;
 	color: #fff;
-	line-height: 1.5;
-	font-size: 24px;
+	letter-spacing: -3px;
+	font-family: 'Pretendard';
+	font-weight: 600;
+	transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+	transition: all 1.3s;
+	opacity: 0;
 }
-
-.contact .con4 .contact_inner ul li span.tit {
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.contact .con4 p {
-	text-align: center;
-	color: #fff;
-	font-size: 24px;
-	line-height: 1.3;
+.contact h2.active{
+	transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transition: transform 1.3s;
+	opacity: 1;
 }
 
 /* footer */
@@ -555,4 +534,15 @@ aside div .top {
 aside div .top img {
 	width: 100%;
 	height: 100%;
+}
+
+@media screen and (max-width: 1360px){
+	.visual .inner .visual_txt .word {
+		font-size: 11.0294vw;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.visual .inner .visual_txt .word {
+		font-size: ;
+	}
 }

@@ -15,7 +15,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* 메인 mask 애니메이션*/
 @keyframes mask {
     0% {
@@ -28,6 +33,10 @@
 }
 
 .inner{
-    max-width: 92%;
+    max-width: 1600px;
     margin: 0 auto;
+}
+.txt_line{
+    overflow: hidden;
+    position: relative;
 }

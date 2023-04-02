@@ -78,7 +78,6 @@
                     scrub: 1,
                     start: "top 70%", 
                     toggleClass: { targets: '.about .txt_bg', className: 'bdRadius'},
-                    markers: true,
                 },
             });
 
@@ -117,6 +116,15 @@
                     scrub: 1,
                     start: "top 50%",
                     end: "bottom bottom"
+                },
+            });
+
+             gsap.to(".contact .txt_line h2",{
+                scrollTrigger:{
+                    trigger: ".contact",
+                    toggleClass: { targets: '.contact .txt_line h2', className: 'active'},
+                    scrub: 1,
+                    start: "top 60%", 
                 },
             });
         }
