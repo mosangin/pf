@@ -1,0 +1,25 @@
+ @import "_mixin";
+ 
+
+ 
+ @include desktop {
+    .visual .inner .visual_txt .word{
+    font-size: 140px;
+    }
+ }
+
+@include laptop {
+    .visual .inner .visual_txt .word {
+        font-size: 120px;
+    }
+}
+
+@include tablet {
+    .visual .inner .visual_txt{
+        line-height: 2;
+    }
+    .visual .inner .visual_txt .word {
+        font-size: 14.323vw;
+        letter-spacing: -3px;
+    }
+}

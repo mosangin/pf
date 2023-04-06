@@ -74,10 +74,10 @@
             
             gsap.to(".about .txt_bg",{
                 scrollTrigger:{
-                    trigger: ".portfolio",
+                    trigger: ".goal",
                     scrub: 1,
                     start: "top 70%", 
-                    toggleClass: { targets: '.about .txt_bg', className: 'bdRadius'},
+                    toggleClass: { targets: '.about .txt_bg', className: 'bdRadius' },
                 },
             });
 
