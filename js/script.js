@@ -1,7 +1,6 @@
-
-
-//스크롤시 header
 $(function () {
+
+  //스크롤시 header
   var fixedHeader = 300;
   $(window).scroll(function () {
     var scroll = getCurrentScroll();
@@ -14,22 +13,55 @@ $(function () {
   function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
   }
+
+  // 모바일 메뉴
+  $('.nav_btn').click(function () {
+    $('.nav_box').toggleClass('active');
+    $('.nav_btn').toggleClass('active');
+    $('.logo').toggleClass('active');
+    $('body').toggleClass('no_scroll');
+  })
+
+  // 1024px 초과시 active 클래스 제거
+  $(window).on('resize', function(){
+    var windowWidth = $(this).width();
+    if (windowWidth > 1024) {
+      $('.nav_box').removeClass('active');
+      $('.logo').removeClass('active');
+      $('.nav_btn').removeClass('active');
+      $('body').removeClass('no_scroll');
+    }
+  });
+
+   ////menu click
+  gsap.registerPlugin(ScrollTrigger);
+   menuMo = gsap.timeline({
+            defaults:{
+                ease:'ease-in-out'
+            }
+        })
+    $('.nav ul li a, .nav_box ul li a').click(function(e){
+      e.preventDefault();
+
+      trgt = $(this).data('target');
+      trgtOffset = $(trgt).offset().top;
+
+      // 햄버거 메뉴 클릭시 navbox 닫히면서 이동
+      menuMo.reverse();
+      $('.nav_box').removeClass('active');
+      $('.logo').removeClass('active');
+      $('.nav_btn').removeClass('active');
+      $('body').removeClass('no_scroll');
+
+      gsap.to('html,body',{
+        scrollTop:trgtOffset,
+        duration: .5,
+      })
+
+    })
+
 });
 
-var pull = $(".fas");
-menu = $(".var");
-menuHeight = menu.height();
-
-$(pull).on("click", function (e) {
-  e.preventDefault();
-  menu.slideToggle();
-});
-$(window).resize(function () {
-  var w = $(window).width();
-  if (w > 768 && menu.is(":hidden")) {
-    menu.removeAttr("style");
-  }
-});
 
 //맨 위로 올라가기
 var sa = 700;

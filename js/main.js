@@ -37,8 +37,8 @@
         }
     });
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.matchMedia({
-        "(min-width:1024px)": function () {
+    // ScrollTrigger.matchMedia({
+    //     "(min-width:1024px)": function () {
             gsap.to(".one1",{
                 scrollTrigger:{
                     trigger:".visual",
@@ -71,7 +71,8 @@
             aboutBg
             .set('.about .txt_bg', { duration: 1, x: '-100%' })
             .to('.about .txt_bg',{duration: 1, x: 0})
-            
+            .to('.about .txt_bg',{borderRadius: "0 70px 70px 0"},"<+0.3")
+                
             gsap.to(".about .txt_bg",{
                 scrollTrigger:{
                     trigger: ".goal",
@@ -127,9 +128,9 @@
                     start: "top 60%", 
                 },
             });
-        }
+    //     }
         
-    });  
+    // });  
 function updateIndicator(entries, observer) {
   const indicator = document.querySelector('.indicator');
 

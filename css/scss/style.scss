@@ -1,8 +1,13 @@
+ @import "_mixin";
+
 $mainPointColor: #39594f;
 $mainColor: #454545;
 $fontColor: #1a1a1a;
 $white: #fff;
 
+.no_scroll{
+    overflow: hidden;
+}
 .mask {
     position: fixed;
     left: 0;
@@ -24,7 +29,7 @@ header{
     position: fixed;
     width: 100%;
     transition: all 0.3s;
-    z-index: 100;
+    z-index: 555;
     & .header_inner{
         display: flex;
         justify-content: space-between;
@@ -32,35 +37,161 @@ header{
         width: 92%;
         margin: 0 auto;
         padding: 30px 0;
-        border-bottom: 1px solid $mainColor;
-    }
-    & h1{
-        width: 200px;
-        & a.logo{
-            display: block;
-            font-size: 30px;
-            color: $mainColor;
-            letter-spacing: -2px;
-            font-family: 'Montserrat', sans-serif;
-        }
-    }
-    & .var{
-        display: none;
-    }
-    & nav ul{
-        display: flex;
-        justify-content: space-between;
-        gap: 0 40px;
-        & li{
-            text-align: center;
-            & a{
-                display: block;
-                font-size: 18px;
-                color: $mainColor;
-                font-weight: 300;
-                font-family: 'Montserrat', sans-serif;
+        transition: .5s ease;
+            & h1{
+                z-index: 5;
+                & a.logo {
+                    display: block;
+                    font-size: 30px;
+                    color: $mainColor;
+                    letter-spacing: -2px;
+                    font-family: 'Montserrat', sans-serif;
+                    transition: .5s ease;
+                    @include mobile {
+                        font-size: 24px;
+                    }
+                    &.active{
+                        color: $white;
+                    }
+                }
             }
-        }
+            & nav{
+                @include laptop {
+                    display: none;
+                }
+                & ul{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 0 40px;
+                    & li {
+                        text-align: center;
+                        & a {
+                            position: relative;
+                            display: block;
+                            font-size: 18px;
+                            color: $mainColor;
+                            font-weight: 300;
+                            font-family: 'Montserrat', sans-serif;
+                            transition: all .3s;
+                            &:before{
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                left: 0px;
+                                bottom: -8px;
+                                width: 100%;
+                                height: 1px;
+                                background-color: $mainPointColor;
+                                transform: scaleX(0);
+                                transition: transform 0.3s;
+                                transform-origin: 100% 0;
+                            }
+                            &:hover{
+                                color: $mainPointColor;
+                                &::before{
+                                    transform: scaleX(1);
+                                    transform-origin: 0 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .nav_btn{
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                width: 26px;
+                height: 18px;
+                background: 0;
+                border: 0;
+                z-index: 5;
+                &.active{
+                    & span{
+                        background: $white;
+                        &:nth-child(1){
+                            -webkit-transform: translateY(10px) rotate(45deg);
+                            -ms-transform: translateY(10px) rotate(45deg);
+                            -o-transform: translateY(10px) rotate(45deg);
+                            transform: translateY(10px) rotate(45deg);
+                        }
+                        &:nth-child(2){
+                            opacity: 0;
+                        }
+                        &:nth-child(3){
+                            -webkit-transform: translateY(-6px) rotate(-45deg);
+                            -ms-transform: translateY(-6px) rotate(-45deg);
+                            -o-transform: translateY(-6px) rotate(-45deg);
+                            transform: translateY(-6px) rotate(-45deg);
+                        }
+                    }
+                }
+                @include laptop {
+                    display: flex;
+                }
+
+                & span{
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background: $mainColor;
+                    transition: .5s ease;
+                
+                    &:nth-child(1){
+                        top: 0;
+                    }
+                    &:nth-child(2){
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 75%;
+                    }
+                    &:nth-child(3){
+                        bottom: 0;
+                    }
+                }
+            }
+            & .nav_box{
+                position: fixed;
+                top: 0;
+                left: 0;
+                transform: translateX(100%);
+                width: 100%;
+                height: 100%;
+                background: $mainColor;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 1;
+                transition: .5s ease;
+                &.active{
+                    transform: translateX(0);
+                    visibility: visible;
+                    opacity: 1;
+                }
+                & ul{
+                    position: absolute;
+                    top: 50%;
+                    left: 8%;
+                    transform: translateY(-50%);
+                    & li{
+                        line-height: 1.2;
+                        & a{
+                            font-size: 90px;
+                            color: $white;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-family: "Montserrat", sans-serif;
+                            @include tablet {
+                                font-size: 70px;
+                            }
+                            @include mobile {
+                                font-size: 12.5vw;
+                            }
+                        }
+                    }
+                }
+            }
     }
 }
 
@@ -70,12 +201,18 @@ header{
     overflow: hidden;
     height: 100vh;
     background: $white;
+
     & .inner .visual_txt{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
         z-index: 2;
+
+        @include tablet {
+            line-height: 2;
+        }
         & .word{
             display: none;
             overflow: hidden;
@@ -87,12 +224,25 @@ header{
             font-weight: 900;
             font-family: 'Montserrat', sans-serif;
             text-shadow: 1px 3px 3px rgba(255, 255, 255, .3);
+
+            @include laptopL {
+                font-size: 140px;
+            }
+
+            @include laptop {
+                font-size: 120px;
+            }
+            @include tablet {
+                font-size: 14.323vw;
+                letter-spacing: -3px;
+            }
+
             &.on{
                 display: inline-block;
             }
         }
         & .word2{
-            color: #518071;
+            color: $mainPointColor;
         }
         & .rect{
             width: 100%;
@@ -113,11 +263,29 @@ header{
 /* 프로필 */
 .profile {
     overflow: hidden;
+    position: relative;
     display: flex;
+    height: 800px;
+    @include laptop {
+        flex-direction: column;
+        height: auto;
+    }
     & .about{
         overflow: hidden;
-        position: relative;
-        width: 50%;
+        position: absolute;
+        left: 0;
+        width: 58%;
+        // background: $mainPointColor;
+        // border-radius: 0 70px 70px 0;
+        z-index: 1;
+        @include laptopL {
+            width: 56%;
+        }
+        @include laptop {
+            position: static;
+            width: 100%;
+            background: $mainPointColor;
+        }
         & .txt_bg{
             position: absolute;
             top: 0;
@@ -129,80 +297,138 @@ header{
             background: $mainPointColor;
             transform: translateX(-100%);
             transition: border-radius .9s;
+            @include laptop {
+                display: none;
+            }
             &.bdRadius{
                 border-radius: 0 0 350px 0;
+                border-radius: 0 70px 70px 0;
             }
         }
         & .txt_box{
+            display: flex;
+            align-items: center;
             position: relative;
-            padding: 140px 0 140px 15%;
+            height: 680px;
+            padding: 0 5% 0 15%;
             z-index: 1;
-        }
-        & .txt_line p{
-            font-size: 40px;
-            line-height: 1.4;
-            color: $white;
-            font-family: "S-CoreDream-5Medium";
-            transform: translateY(100%);
-            -moz-transform: translateY(100%);
-            -ms-transform: translateY(100%);
-            -o-transform: translateY(100%);
-            transition: all 1.3s;
-            opacity: 0;
-            &.active{
-                transform: translateY(0);
-                -moz-transform: translateY(0);
-                -ms-transform: translateY(0);
-                -o-transform: translateY(0);
-                transition: transform 1.3s;
-                opacity: 1;
+            @include laptopL {
+                padding: 0 5% 0 4%;
             }
-        }
-        & .desc{
-            padding-top: 30px;
-            font-size: 28px;
-            text-align: left;
-            line-height: 1.8;
-            color: $white;
-            font-family: 'S-CoreDream-3Light';
+            @include desktop {
+                height: 600px;
+            }
+            @include laptop {
+                height: auto;
+                padding: 60px 40px;
+            }
+            & .area{
+                & .txt_line p {
+                    font-size: 40px;
+                    line-height: 1.4;
+                    color: $white;
+                    font-family: "S-CoreDream-5Medium";
+                    transform: translateY(100%);
+                    -moz-transform: translateY(100%);
+                    -ms-transform: translateY(100%);
+                    -o-transform: translateY(100%);
+                    transition: all 1.3s;
+                    opacity: 0;
+                    @include desktop {
+                        font-size: 32px;
+                    }
+                    &.active {
+                        transform: translateY(0);
+                        -moz-transform: translateY(0);
+                        -ms-transform: translateY(0);
+                        -o-transform: translateY(0);
+                        transition: transform 1.3s;
+                        opacity: 1;
+                    }
+                }
+                & .desc {
+                    width: 78%;
+                    padding-top: 30px;
+                    font-size: 28px;
+                    text-align: left;
+                    line-height: 1.8;
+                    color: $white;
+                    font-family: 'S-CoreDream-3Light';
+                    word-break: keep-all;
+                    @include laptopL {
+                        width: 100%;
+                    }
+                    @include desktop {
+                        font-size: 21px;
+                    }
+                    
+                }
+            }
         }
     }
     & .info{
-        width: 50%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 52%;
+        height: 635px;
+        border-radius: 70px 0 0 70px;
+        border: 1px solid $mainColor;
+        border-right:0;
+        @include desktop {
+            height: 560px;
+        }
+        @include laptop {
+            position: static;
+            width: 100%;
+            height: auto;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid $mainColor;
+        }
+        &.bd{
+            border: 1px solid $mainColor;
+        }
         & .area{
-            padding: 140px 10% 140px 15%;
+            padding: 0 10% 0 28%;
+            @include laptopL {
+                padding-left: 24%;
+            }
+            @include laptop {
+                padding: 60px 40px;
+            }
             & h4{
                 font-size: 32px;
                 line-height: 1.4;
                 color: $fontColor;
                 font-family: "S-CoreDream-5Medium";
+                @include desktop {
+                    font-size: 28px;
+                }
+            }
+            & .c_name{
+                display: block;
+                padding-top: 30px;
+                font-size: 18px;
+                color: $fontColor;
+                line-height: 2.2;
+                font-family: "S-CoreDream-5Medium";
             }
             & .history ul{
-                margin-top: 30px;
+                margin-top: 5px;
                 & li{
-                    font-size: 18px;
-                    color: $fontColor;
-                    line-height: 2.2;
-                    font-family: "S-CoreDream-5Medium";
-                    & p{
-                        position: relative;
-                        padding-left: 20px;
+                    &.c_desc{
+                        margin-left: 2rem;
                         font-size: 16px;
                         font-family: "S-CoreDream-3Light";
-                        &:before{
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            top: 50%;
-                            left: 0;
-                            transform: translateY(-50%);
-                            width: 6px;
-                            height: 6px;
-                            background: $mainPointColor;
-                            border-radius: 50%;
-                        }
-                        &:last-child:before{
-                            display: none;
+                        line-height: 2.2;
+                        word-break: keep-all;
+                        list-style: disc;
+                        &::marker {
+                            color: #39594f;
+                            font-size: 16px;
                         }
                     }
                 }
@@ -211,7 +437,8 @@ header{
                 margin-top: 30px;
                 & ul{
                     display: flex;
-                    gap: 0 10px;
+                    flex-wrap: wrap;
+                    gap: 10px;
                     margin-top: 30px;
                     & li{
                         padding: 5px 10px;
@@ -263,7 +490,6 @@ header{
             &::marker{
                 color: $mainPointColor;
                 font-size: 16px;
-                font-family: "S-CoreDream-6Bold";
             }
         }
     }
@@ -275,6 +501,9 @@ header{
     position: relative;
     background: $white;
     height: 100vh;
+    @include laptop {
+        height: 68.359vw;
+    }
     & .inner{
         display: flex;
         align-items: center;
@@ -293,13 +522,25 @@ header{
                 letter-spacing: -7px;
                 font-weight: 700;
                 font-family: 'Pretendard';
+                @include laptopL{
+                    font-size: 17.143vw;
+                }
+                @include mobile {
+                    letter-spacing: -5px;
+                }
                 &.bg_txt1{
                     top: 5%;
                     left: -5%;
+                    @include laptopL {
+                        top: 7.143vw;
+                    }
                 }
                 &.bg_txt2 {
                     right: -5%;
                     top: 43%;
+                    @include laptopL {
+                        top: 25vw;
+                    }
                 }
             }
             & .moreBtn {
@@ -322,6 +563,11 @@ header{
                 font-family: "S-CoreDream-3Light";
                 transition: all .8s cubic-bezier(0, 0, .23, 1);
                 z-index: 1;
+                @include laptop {
+                    font-size: 4.102vw;
+                    margin-bottom: 9.766vw;
+                }
+               
                 &:after{
                     display: block;
                     content: "";
