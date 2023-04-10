@@ -458,41 +458,96 @@ header{
 /* 목표 및 기술 */
 .goal {
     padding: 160px 0;
+    @include desktop {
+        padding: 120px 0;
+    }
+    @include mobile {
+        padding: 60px 0;
+    }
     & .inner{
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-    & h2{
-        position: sticky;
-        top: 120px;
-        align-self: flex-start;
-        font-size: 52px;
-        color: $mainPointColor;
-        letter-spacing: -1px;
-        font-family: "S-CoreDream-5Medium";
-        text-align: center;
-    }
-    & .list_box{
-        width: 65%;
-        & .list2{
-            padding-top: 120px;
+        @include laptop {
+            flex-direction: column;
+            gap: 40px 0;
         }
-        & .list li{
-            position: relative;
-            padding-left: 5px;
-            font-size: 24px;
-            line-height: 2;
-            color: #1a1a1a;
-            word-break: keep-all;
-            font-family: "S-CoreDream-3Light";
-            list-style: disc;
-            &::marker{
+        @include mobile {
+            gap: 30px 0;
+        }
+        & .txt_line{
+                position: sticky;
+                top: 120px;
+                align-self: flex-start;
+                @include laptop {
+                   position: static;
+                }
+            & h2{
+                font-size: 52px;
                 color: $mainPointColor;
-                font-size: 16px;
+                letter-spacing: -1px;
+                font-family: "S-CoreDream-5Medium";
+                text-align: center;
+                transform: translateY(100%);
+                -moz-transform: translateY(100%);
+                -ms-transform: translateY(100%);
+                -o-transform: translateY(100%);
+                transition: all 1.3s;
+                opacity: 0;
+                @include desktop{
+                    font-size: 42px;
+                }
+                @include mobile {
+                    font-size: 24px;
+                }
+                &.active {
+                    transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    -o-transform: translateY(0);
+                    transition: transform 1.3s;
+                    opacity: 1;
+                }
+            }
+        }
+        & .list_box {
+            width: 65%;
+            @include laptop {
+                width: 100%;
+            }
+            & .list2 {
+                padding-top: 120px;
+                @include mobile {
+                    padding-top: 60px;
+                }
+            }
+
+            & .list li {
+                position: relative;
+                padding-left: 5px;
+                font-size: 24px;
+                line-height: 2;
+                color: #1a1a1a;
+                word-break: keep-all;
+                font-family: "S-CoreDream-3Light";
+                list-style: disc;
+                @include desktop {
+                   font-size: 21px;
+                }
+                @include laptop {
+                    margin-left: 23px;
+                }
+                @include mobile {
+                    font-size: 18px;
+                }
+                &::marker {
+                    color: $mainPointColor;
+                    font-size: 16px;
+                }
             }
         }
     }
+   
 }
 
 /* 포트폴리오 */
@@ -503,6 +558,9 @@ header{
     height: 100vh;
     @include laptop {
         height: 68.359vw;
+    }
+    @include laptop {
+        height: 83.333vw;
     }
     & .inner{
         display: flex;
@@ -526,7 +584,7 @@ header{
                     font-size: 17.143vw;
                 }
                 @include mobile {
-                    letter-spacing: -5px;
+                    letter-spacing: -3px;
                 }
                 &.bg_txt1{
                     top: 5%;
@@ -534,12 +592,18 @@ header{
                     @include laptopL {
                         top: 7.143vw;
                     }
+                    @include mobile {
+                        top: 13vw;
+                    }
                 }
                 &.bg_txt2 {
                     right: -5%;
                     top: 43%;
                     @include laptopL {
                         top: 25vw;
+                    }
+                    @include mobile {
+                        top: 30vw;
                     }
                 }
             }
@@ -593,5 +657,28 @@ header{
             }
         }
         
+    }
+}
+
+.contact{
+    padding: 80px 0;
+    background: $mainPointColor;
+    & .inner{
+
+        & .txt_line{
+
+            & h2{
+                font-size: 42px;
+                color: #fff;
+                font-family: "S-CoreDream-3Light";
+            }
+        }
+        & p{
+            padding-top: 30px;
+            font-size: 24px;
+            color: #fff;
+            line-height: 1.6;
+            font-family: "S-CoreDream-3Light";
+        }
     }
 }

@@ -478,28 +478,90 @@ header .header_inner .nav_box ul li a {
 .goal {
   padding: 160px 0;
 }
+@media screen and (max-width: 1280px) {
+  .goal {
+    padding: 120px 0;
+  }
+}
+@media (max-width: 480px) {
+  .goal {
+    padding: 60px 0;
+  }
+}
 .goal .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.goal h2 {
+@media screen and (max-width: 1024px) {
+  .goal .inner {
+    flex-direction: column;
+    gap: 40px 0;
+  }
+}
+@media (max-width: 480px) {
+  .goal .inner {
+    gap: 30px 0;
+  }
+}
+.goal .inner .txt_line {
   position: sticky;
   top: 120px;
   align-self: flex-start;
+}
+@media screen and (max-width: 1024px) {
+  .goal .inner .txt_line {
+    position: static;
+  }
+}
+.goal .inner .txt_line h2 {
   font-size: 52px;
   color: #39594f;
   letter-spacing: -1px;
   font-family: "S-CoreDream-5Medium";
   text-align: center;
+  transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transition: all 1.3s;
+  opacity: 0;
 }
-.goal .list_box {
+@media screen and (max-width: 1280px) {
+  .goal .inner .txt_line h2 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 480px) {
+  .goal .inner .txt_line h2 {
+    font-size: 24px;
+  }
+}
+.goal .inner .txt_line h2.active {
+  transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transition: transform 1.3s;
+  opacity: 1;
+}
+.goal .inner .list_box {
   width: 65%;
 }
-.goal .list_box .list2 {
+@media screen and (max-width: 1024px) {
+  .goal .inner .list_box {
+    width: 100%;
+  }
+}
+.goal .inner .list_box .list2 {
   padding-top: 120px;
 }
-.goal .list_box .list li {
+@media (max-width: 480px) {
+  .goal .inner .list_box .list2 {
+    padding-top: 60px;
+  }
+}
+.goal .inner .list_box .list li {
   position: relative;
   padding-left: 5px;
   font-size: 24px;
@@ -509,7 +571,22 @@ header .header_inner .nav_box ul li a {
   font-family: "S-CoreDream-3Light";
   list-style: disc;
 }
-.goal .list_box .list li::marker {
+@media screen and (max-width: 1280px) {
+  .goal .inner .list_box .list li {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .goal .inner .list_box .list li {
+    margin-left: 23px;
+  }
+}
+@media (max-width: 480px) {
+  .goal .inner .list_box .list li {
+    font-size: 18px;
+  }
+}
+.goal .inner .list_box .list li::marker {
   color: #39594f;
   font-size: 16px;
 }
@@ -524,6 +601,11 @@ header .header_inner .nav_box ul li a {
 @media screen and (max-width: 1024px) {
   .portfolio {
     height: 68.359vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .portfolio {
+    height: 83.333vw;
   }
 }
 .portfolio .inner {
@@ -554,7 +636,7 @@ header .header_inner .nav_box ul li a {
 }
 @media (max-width: 480px) {
   .portfolio .inner .txt_box span {
-    letter-spacing: -5px;
+    letter-spacing: -3px;
   }
 }
 .portfolio .inner .txt_box span.bg_txt1 {
@@ -566,6 +648,11 @@ header .header_inner .nav_box ul li a {
     top: 7.143vw;
   }
 }
+@media (max-width: 480px) {
+  .portfolio .inner .txt_box span.bg_txt1 {
+    top: 13vw;
+  }
+}
 .portfolio .inner .txt_box span.bg_txt2 {
   right: -5%;
   top: 43%;
@@ -573,6 +660,11 @@ header .header_inner .nav_box ul li a {
 @media screen and (max-width: 1400px) {
   .portfolio .inner .txt_box span.bg_txt2 {
     top: 25vw;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio .inner .txt_box span.bg_txt2 {
+    top: 30vw;
   }
 }
 .portfolio .inner .txt_box .moreBtn {
@@ -623,4 +715,21 @@ header .header_inner .nav_box ul li a {
   transform: scaleX(1);
   -webkit-transform: scaleX(1);
   -ms-transform: scaleX(1);
+}
+
+.contact {
+  padding: 80px 0;
+  background: #39594f;
+}
+.contact .inner .txt_line h2 {
+  font-size: 42px;
+  color: #fff;
+  font-family: "S-CoreDream-3Light";
+}
+.contact .inner p {
+  padding-top: 30px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.6;
+  font-family: "S-CoreDream-3Light";
 }

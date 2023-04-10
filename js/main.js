@@ -90,6 +90,17 @@
                     start: "top 60%", 
                 },
             });
+
+            gsap.to(".goal .txt_line h2",{
+                scrollTrigger:{
+                    trigger: ".goal",
+                    toggleClass: { targets: '.txt_line h2', className: 'active'},
+                    scrub: 1,
+                    start: "top 60%", 
+                },
+            });
+
+
             // 포트폴리오 백그라운드 텍스트
             gsap.to(".portfolio .txt_box .bg_txt1",{
                 scrollTrigger:{
