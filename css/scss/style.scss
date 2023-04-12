@@ -175,18 +175,26 @@ header{
                     left: 8%;
                     transform: translateY(-50%);
                     & li{
-                        line-height: 1.2;
+                        line-height: 1.5;
                         & a{
                             font-size: 90px;
                             color: $white;
                             text-transform: uppercase;
                             font-weight: 600;
                             font-family: "Montserrat", sans-serif;
+                            transition: all .4s ease;
                             @include tablet {
                                 font-size: 70px;
                             }
                             @include mobile {
                                 font-size: 12.5vw;
+                            }
+                            &:hover{
+                                background: -webkit-linear-gradient(-85deg, rgb(57, 89, 79), rgb(255, 255, 255));
+                                background: linear-gradient(-85deg, rgb(57, 89, 79), rgb(255, 255, 255));
+                                -webkit-background-clip: text;
+
+                                color: transparent;
                             }
                         }
                     }
@@ -322,6 +330,10 @@ header{
                 height: auto;
                 padding: 60px 40px;
             }
+            @include mobile {
+                height: auto;
+                padding: 60px 20px;
+            }
             & .area{
                 & .txt_line p {
                     font-size: 40px;
@@ -336,6 +348,9 @@ header{
                     opacity: 0;
                     @include desktop {
                         font-size: 32px;
+                    }
+                    @include mobile {
+                        font-size: 24px;
                     }
                     &.active {
                         transform: translateY(0);
@@ -361,7 +376,9 @@ header{
                     @include desktop {
                         font-size: 21px;
                     }
-                    
+                    @include mobile {
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -399,6 +416,9 @@ header{
             @include laptop {
                 padding: 60px 40px;
             }
+            @include mobile {
+                padding: 60px 20px;
+            }
             & h4{
                 font-size: 32px;
                 line-height: 1.4;
@@ -406,6 +426,9 @@ header{
                 font-family: "S-CoreDream-5Medium";
                 @include desktop {
                     font-size: 28px;
+                }
+                @include mobile {
+                    font-size: 24px;
                 }
             }
             & .c_name{
@@ -415,6 +438,10 @@ header{
                 color: $fontColor;
                 line-height: 2.2;
                 font-family: "S-CoreDream-5Medium";
+                @include mobile {
+                    padding-top: 20px;
+                    font-size: 16px;
+                }
             }
             & .history ul{
                 margin-top: 5px;
@@ -426,9 +453,15 @@ header{
                         line-height: 2.2;
                         word-break: keep-all;
                         list-style: disc;
+                        @include mobile {
+                            font-size: 14px;
+                        }
                         &::marker {
                             color: #39594f;
                             font-size: 16px;
+                            @include mobile {
+                                font-size: 14px;
+                            }
                         }
                     }
                 }
@@ -440,6 +473,9 @@ header{
                     flex-wrap: wrap;
                     gap: 10px;
                     margin-top: 30px;
+                    @include mobile {
+                        margin-top: 20px;
+                    }
                     & li{
                         padding: 5px 10px;
                         border-radius: 10px;
@@ -447,6 +483,9 @@ header{
                         font-size: 15px;
                         color: $white;
                         font-family: "S-CoreDream-3Light";
+                        @include mobile {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -515,13 +554,6 @@ header{
             @include laptop {
                 width: 100%;
             }
-            & .list2 {
-                padding-top: 120px;
-                @include mobile {
-                    padding-top: 60px;
-                }
-            }
-
             & .list li {
                 position: relative;
                 padding-left: 5px;
@@ -538,11 +570,20 @@ header{
                     margin-left: 23px;
                 }
                 @include mobile {
-                    font-size: 18px;
+                    margin-left: 20px;
+                    padding-left: 0;
+                    font-size: 14px;
                 }
                 &::marker {
                     color: $mainPointColor;
                     font-size: 16px;
+                    @include mobile {
+                        font-size: 14px;
+                        padding-left: 0px;
+                    }
+                }
+                &:not(:last-child){
+                    margin-bottom: 20px;
                 }
             }
         }
@@ -679,6 +720,43 @@ header{
             color: #fff;
             line-height: 1.6;
             font-family: "S-CoreDream-3Light";
+        }
+    }
+}
+
+/* 포트폴리오 페이지*/
+.pf{
+    background: #f5f5f5;
+    padding-top: 250px;
+    & .inner{
+        & .sub_tit{
+            font-size: 80px;
+            color: $mainPointColor;
+            font-family: "S-CoreDream-6bold";
+        }
+        & .portfolio_box{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 30px;
+                margin-top: 60px;
+            & .list{
+                & .list_img{
+                    height: 350px;
+                    border: 1px solid #ddd;
+                    & img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                & .title{
+                    & h4{
+                        padding-top: 20px;
+                        font-size: 28px;
+                        letter-spacing: -1px;
+                        font-family: "S-CoreDream-5Medium";
+                    }
+                }
+            }
         }
     }
 }

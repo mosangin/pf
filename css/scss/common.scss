@@ -44,6 +44,9 @@
     @include laptop {
         padding: 0 40px;
     }
+    @include mobile {
+        padding: 0 20px;
+    }
 }
 .txt_line {
     overflow: hidden;

@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모상인 포트폴리오</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">                                          
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8df6f6db4a.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
@@ -25,30 +23,7 @@
 <body>
     <div class="mask"></div>
     <div class="wrap">
-        <header class="header">
-            <div class="header_inner">
-                <h1><a href="index.html" class="logo">MOSANGIN</a></h2>
-                <nav class="nav">
-                    <ul>
-                        <li><a href=".about" data-target=".profile">About</a></li>
-                        <li><a href=".portfolio" data-target=".portfolio">Portfolio</a></li>
-                        <li><a href=".contact" data-target=".contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <button class="nav_btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="nav_box">
-                    <ul>
-                        <li><a href=".about" data-target=".profile">About</a></li>
-                        <li><a href=".portfolio" data-target=".portfolio">Portfolio</a></li>
-                        <li><a href=".contact" data-target=".contact">Contact</a></li>
-                    </ul>
-                </div> 
-            </div>
-        </header>
+        <div class="header-include"></div>
         <div class="visual section">
             <div class="inner">
                 <div class="visual_txt"> 
@@ -136,32 +111,27 @@
                 <div class="list_box">
                     <ul class="list">
                         <li>
-                            미디어쿼리를 활용한 반응형 웹 제작이 가능하며 gsap.js 및
-                            여러 플러그인을 사용해 웹사이트에 동적인 효과를 넣도록
+                            미디어쿼리를 활용한 반응형 웹 제작이 가능하며 gsap.js 및 여러 플러그인을 사용해 웹사이트에 원하는
+                            동적인 효과를 넣도록 노력합니다.
                         </li>
                         <li>
-                            그누보드,photoshop,figma를 다룰줄알며
+                            그누보드, photoshop ,figma를 다룰줄알며
                             협업을 위한 git을 공부중입니다.
                         </li>
                         <li>
                             웹 표준과 웹 접근성 준수하여 마크업하는 것을 지향합니다.
                         </li>
-                    </ul>
-                    <ul class="list list2">
                         <li>
                             Notion에 강의를 들으면서 정리한 내용과 작업하는데 도움이 될만한 것들을 기록해놓고 있습니다.
                         </li>
                         <li>
-                            향후 목표는 탄탄한 마크업을 바탕으로 꾸준하게 자바스크립트 학습을 하며
-                            업무영역을 넓혀나가기 위해서 <br> vue.js 및 react 학습을 하여
-                            뒤쳐지지않도록 발전하겠습니다.
-                        </li>
-                        <li>
-                            업무를 경험해보면서 느낀점은 길게보고 꾸준하게 하는게 중요하다고 생각합니다.
+                            향후 목표는 업무영역을 넓혀나가기 위해서 
+                            꾸준하게 자바스크립트 학습을 하며
+                            vue.js 및 react 도 다룰수 있도록
+                            성장하겠습니다.
                         </li>
                     </ul>
                 </div>
-        
             </div>
         </section>
         <section class="portfolio section">
@@ -196,11 +166,5 @@
         </aside>
     </div>
 </body>
-<!-- <article class="indicator">
-    <div class="indicator-item" data-index="1">1</div>
-    <div class="indicator-item" data-index="2">2</div>
-    <div class="indicator-item" data-index="3">3</div>
-    <div class="indicator-item" data-index="4">4</div>
-</article> -->
 
 </html>

@@ -1,5 +1,8 @@
 $(function () {
 
+  //header include
+  $('.header-include').load('header.html')
+
   //스크롤시 header
   var fixedHeader = 300;
   $(window).scroll(function () {
@@ -82,7 +85,7 @@ $(".top").click(function (e) {
 
 //스크롤
 
-$("#nav a, .var a").click(function () {
+$(".nav a").click(function () {
   var $elem = $($(this).attr("href"));
   var offset = $elem.offset().top - $(window).height() / 2 + $elem.height() / 2;
   $("html, body").animate(

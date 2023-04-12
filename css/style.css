@@ -168,7 +168,7 @@ header .header_inner .nav_box ul {
   transform: translateY(-50%);
 }
 header .header_inner .nav_box ul li {
-  line-height: 1.2;
+  line-height: 1.5;
 }
 header .header_inner .nav_box ul li a {
   font-size: 90px;
@@ -176,6 +176,7 @@ header .header_inner .nav_box ul li a {
   text-transform: uppercase;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  transition: all 0.4s ease;
 }
 @media (max-width: 768px) {
   header .header_inner .nav_box ul li a {
@@ -186,6 +187,11 @@ header .header_inner .nav_box ul li a {
   header .header_inner .nav_box ul li a {
     font-size: 12.5vw;
   }
+}
+header .header_inner .nav_box ul li a:hover {
+  background: linear-gradient(-85deg, rgb(57, 89, 79), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* 배너 */
@@ -334,6 +340,12 @@ header .header_inner .nav_box ul li a {
     padding: 60px 40px;
   }
 }
+@media (max-width: 480px) {
+  .profile .about .txt_box {
+    height: auto;
+    padding: 60px 20px;
+  }
+}
 .profile .about .txt_box .area .txt_line p {
   font-size: 40px;
   line-height: 1.4;
@@ -349,6 +361,11 @@ header .header_inner .nav_box ul li a {
 @media screen and (max-width: 1280px) {
   .profile .about .txt_box .area .txt_line p {
     font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .profile .about .txt_box .area .txt_line p {
+    font-size: 24px;
   }
 }
 .profile .about .txt_box .area .txt_line p.active {
@@ -377,6 +394,11 @@ header .header_inner .nav_box ul li a {
 @media screen and (max-width: 1280px) {
   .profile .about .txt_box .area .desc {
     font-size: 21px;
+  }
+}
+@media (max-width: 480px) {
+  .profile .about .txt_box .area .desc {
+    font-size: 16px;
   }
 }
 .profile .info {
@@ -422,6 +444,11 @@ header .header_inner .nav_box ul li a {
     padding: 60px 40px;
   }
 }
+@media (max-width: 480px) {
+  .profile .info .area {
+    padding: 60px 20px;
+  }
+}
 .profile .info .area h4 {
   font-size: 32px;
   line-height: 1.4;
@@ -433,6 +460,11 @@ header .header_inner .nav_box ul li a {
     font-size: 28px;
   }
 }
+@media (max-width: 480px) {
+  .profile .info .area h4 {
+    font-size: 24px;
+  }
+}
 .profile .info .area .c_name {
   display: block;
   padding-top: 30px;
@@ -440,6 +472,12 @@ header .header_inner .nav_box ul li a {
   color: #1a1a1a;
   line-height: 2.2;
   font-family: "S-CoreDream-5Medium";
+}
+@media (max-width: 480px) {
+  .profile .info .area .c_name {
+    padding-top: 20px;
+    font-size: 16px;
+  }
 }
 .profile .info .area .history ul {
   margin-top: 5px;
@@ -452,9 +490,19 @@ header .header_inner .nav_box ul li a {
   word-break: keep-all;
   list-style: disc;
 }
+@media (max-width: 480px) {
+  .profile .info .area .history ul li.c_desc {
+    font-size: 14px;
+  }
+}
 .profile .info .area .history ul li.c_desc::marker {
   color: #39594f;
   font-size: 16px;
+}
+@media (max-width: 480px) {
+  .profile .info .area .history ul li.c_desc::marker {
+    font-size: 14px;
+  }
 }
 .profile .info .area .skill {
   margin-top: 30px;
@@ -465,6 +513,11 @@ header .header_inner .nav_box ul li a {
   gap: 10px;
   margin-top: 30px;
 }
+@media (max-width: 480px) {
+  .profile .info .area .skill ul {
+    margin-top: 20px;
+  }
+}
 .profile .info .area .skill ul li {
   padding: 5px 10px;
   border-radius: 10px;
@@ -472,6 +525,11 @@ header .header_inner .nav_box ul li a {
   font-size: 15px;
   color: #fff;
   font-family: "S-CoreDream-3Light";
+}
+@media (max-width: 480px) {
+  .profile .info .area .skill ul li {
+    font-size: 12px;
+  }
 }
 
 /* 목표 및 기술 */
@@ -553,14 +611,6 @@ header .header_inner .nav_box ul li a {
     width: 100%;
   }
 }
-.goal .inner .list_box .list2 {
-  padding-top: 120px;
-}
-@media (max-width: 480px) {
-  .goal .inner .list_box .list2 {
-    padding-top: 60px;
-  }
-}
 .goal .inner .list_box .list li {
   position: relative;
   padding-left: 5px;
@@ -583,12 +633,23 @@ header .header_inner .nav_box ul li a {
 }
 @media (max-width: 480px) {
   .goal .inner .list_box .list li {
-    font-size: 18px;
+    margin-left: 20px;
+    padding-left: 0;
+    font-size: 14px;
   }
 }
 .goal .inner .list_box .list li::marker {
   color: #39594f;
   font-size: 16px;
+}
+@media (max-width: 480px) {
+  .goal .inner .list_box .list li::marker {
+    font-size: 14px;
+    padding-left: 0px;
+  }
+}
+.goal .inner .list_box .list li:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 /* 포트폴리오 */
@@ -732,4 +793,35 @@ header .header_inner .nav_box ul li a {
   color: #fff;
   line-height: 1.6;
   font-family: "S-CoreDream-3Light";
+}
+
+/* 포트폴리오 페이지*/
+.pf {
+  background: #f5f5f5;
+  padding-top: 250px;
+}
+.pf .inner .sub_tit {
+  font-size: 80px;
+  color: #39594f;
+  font-family: "S-CoreDream-6bold";
+}
+.pf .inner .portfolio_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-top: 60px;
+}
+.pf .inner .portfolio_box .list .list_img {
+  height: 350px;
+  border: 1px solid #ddd;
+}
+.pf .inner .portfolio_box .list .list_img img {
+  width: 100%;
+  height: 100%;
+}
+.pf .inner .portfolio_box .list .title h4 {
+  padding-top: 20px;
+  font-size: 28px;
+  letter-spacing: -1px;
+  font-family: "S-CoreDream-5Medium";
 }
