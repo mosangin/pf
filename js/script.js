@@ -1,8 +1,5 @@
 $(function () {
 
-  //header include
-  $('.header-include').load('header.html')
-
   //스크롤시 header
   var fixedHeader = 300;
   $(window).scroll(function () {

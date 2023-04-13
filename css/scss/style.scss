@@ -725,38 +725,86 @@ header{
 }
 
 /* 포트폴리오 페이지*/
-.pf{
-    background: #f5f5f5;
-    padding-top: 250px;
-    & .inner{
-        & .sub_tit{
-            font-size: 80px;
-            color: $mainPointColor;
-            font-family: "S-CoreDream-6bold";
+.sub{
+    .header{
+        & .header_inner{
+            & nav{
+                @include laptop {
+                    display: block;
+                }
+            }
         }
-        & .portfolio_box{
+    }
+    .pf {
+        background: #f5f5f5;
+        padding-top: 250px;
+
+        & .inner {
+            & .sub_tit {
+                font-size: 80px;
+                color: $mainPointColor;
+                font-family: "S-CoreDream-6bold";
+            }
+
+            & .portfolio_box {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 30px;
                 margin-top: 60px;
-            & .list{
-                & .list_img{
-                    height: 350px;
-                    border: 1px solid #ddd;
-                    & img{
-                        width: 100%;
-                        height: 100%;
+
+                & .list {
+                    & .list_img {
+                        height: 350px;
+                        border: 1px solid #ddd;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
-                }
-                & .title{
-                    & h4{
-                        padding-top: 20px;
-                        font-size: 28px;
-                        letter-spacing: -1px;
-                        font-family: "S-CoreDream-5Medium";
+
+                    & .title {
+                        & h4 {
+                            padding-top: 20px;
+                            font-size: 28px;
+                            letter-spacing: -1px;
+                            font-family: "S-CoreDream-5Medium";
+                        }
                     }
                 }
             }
+        }
+    }
+    .pf_modal{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.7);
+        & .modal_wrap{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            max-height: 700px;
+            padding: 60px 30px;
+            background: #fff;
+            border-radius: 30px;
+            & .view_cont{
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                & img{
+                    display: block;
+                    width: 50%;
+                    margin: 0 auto;
+                }
+            }    
         }
     }
 }

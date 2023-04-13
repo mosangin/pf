@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/8df6f6db4a.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
     <script defer src="js/script.js"></script>
@@ -21,9 +20,35 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <!-- 홈페이지 로딩 애니메이션 -->
     <div class="mask"></div>
     <div class="wrap">
-        <div class="header-include"></div>
+        <!-- 헤더 -->
+        <header class="header">
+            <div class="header_inner">
+                <h1><a href="index.html" class="logo">MOSANGIN</a></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href=".profile" data-target=".profile">About</a></li>
+                        <li><a href="pf.html" data-target=".portfolio">Portfolio</a></li>
+                        <li><a href=".contact" data-target=".contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="nav_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav_box">
+                    <ul>
+                        <li><a href=".about" data-target=".profile">About</a></li>
+                        <li><a href="pf.html" data-target=".portfolio">Portfolio</a></li>
+                        <li><a href=".contact" data-target=".contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 배너 -->
         <div class="visual section">
             <div class="inner">
                 <div class="visual_txt"> 
@@ -40,7 +65,8 @@
                 </div>
             </div>
         </div>
-        <section class="profile section">
+        <!-- 프로필 -->
+        <section id="profile" class="profile section">
             <div class="about">
                 <div class="txt_bg"></div>
                 <div class="txt_box">
@@ -103,6 +129,7 @@
                 </div>
             </div>
         </section>
+        <!-- 목표 및 기술 -->
         <section class="goal section">
             <div class="inner">
                 <div class="txt_line">
@@ -134,20 +161,21 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio section">
+        <!-- 포트폴리오 바로가기 -->
+        <section  class="portfolio section">
             <div class="inner">
                 <div class="txt_box">
                     <span class="bg_txt1">MOSANGIN</span>
                     <span class="bg_txt2">PORTFOLIO</span>
-                    <a href="#" class="moreBtn">포트폴리오 바로가기</a>
+                    <a href="pf.html" class="moreBtn">포트폴리오 바로가기</a>
                 </div>
                 <!-- <ul class="port_wrap">
                 </ul>   
                 <button class="more">더보기<button> -->
             </div>
         </section>
-        
-        <section class="contact section">
+        <!-- 연락처 -->
+        <section id="contact" class="contact section">
             <div class="inner">
                 <div class="txt_line txt_line1">
                     <h2>감사합니다.</h2>

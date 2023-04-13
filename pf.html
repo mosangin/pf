@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모상인 포트폴리오</title>
+    <title>포트폴리오 페이지</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -12,17 +12,23 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/8df6f6db4a.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
     <script defer src="js/script.js"></script>
     <script defer src="js/main.js"></script>
     <script defer src="js/filter.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <div class="header-include"></div>
     <div class="wrap sub">
+        <header class="header">
+            <div class="header_inner">
+                <h1><a href="index.html" class="logo">MOSANGIN</a></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <section class="pf">
             <div class="inner">
                 <h2 class="sub_tit">
@@ -45,9 +51,29 @@
                             <h4>우정건축</h4>
                         </div>
                     </div>
-                </div>
+                    <div class="list">
+                        <div class="list_img">
+                            <img src="img/pf3.jpg" alt="포러스젠">
+                        </div>
+                        <div class="title">
+                            <h4>포러스젠</h4>
+                        </div>
+                    </div>
+                </div>                
             </div>
         </section>
+        <div class="pf_modal">
+            <div class="modal_wrap">
+                <div class="view_cont">
+                    <img src="img/pf1.jpg" alt="">
+                    <img src="img/pf1.jpg" alt="">
+                    <img src="img/pf1.jpg" alt="">
+                    <div class="txt_box">
+                        <a href="">사이트 바로가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -796,32 +796,69 @@ header .header_inner .nav_box ul li a:hover {
 }
 
 /* 포트폴리오 페이지*/
-.pf {
+@media screen and (max-width: 1024px) {
+  .sub .header .header_inner nav {
+    display: block;
+  }
+}
+.sub .pf {
   background: #f5f5f5;
   padding-top: 250px;
 }
-.pf .inner .sub_tit {
+.sub .pf .inner .sub_tit {
   font-size: 80px;
   color: #39594f;
   font-family: "S-CoreDream-6bold";
 }
-.pf .inner .portfolio_box {
+.sub .pf .inner .portfolio_box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   margin-top: 60px;
 }
-.pf .inner .portfolio_box .list .list_img {
+.sub .pf .inner .portfolio_box .list .list_img {
   height: 350px;
   border: 1px solid #ddd;
 }
-.pf .inner .portfolio_box .list .list_img img {
+.sub .pf .inner .portfolio_box .list .list_img img {
   width: 100%;
   height: 100%;
 }
-.pf .inner .portfolio_box .list .title h4 {
+.sub .pf .inner .portfolio_box .list .title h4 {
   padding-top: 20px;
   font-size: 28px;
   letter-spacing: -1px;
   font-family: "S-CoreDream-5Medium";
+}
+.sub .pf_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.sub .pf_modal .modal_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-height: 700px;
+  padding: 60px 30px;
+  background: #fff;
+  border-radius: 30px;
+}
+.sub .pf_modal .modal_wrap .view_cont {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.sub .pf_modal .modal_wrap .view_cont img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
 }
