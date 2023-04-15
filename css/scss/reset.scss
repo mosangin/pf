@@ -59,7 +59,11 @@ a {
     text-decoration: none;
     color: #555;
 }
-
+button {
+    border: 0;
+    background: 0;
+    cursor: pointer;
+}
 ul,
 li {
     list-style: none;
