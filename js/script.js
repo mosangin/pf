@@ -65,7 +65,11 @@ $(function () {
 $(".pf_more").each(function(index) {
     var target = ".view_cont[data-id='" + (index + 1) + "']"; // 공통된 클래스(.view_cont)와 data-id 속성값을 사용해서 선택자를 만듭니다.
     $(this).attr("data-target", target);
-  });
+});
+$(".m_pf_more").each(function(index) {
+    var target = ".view_cont[data-id='" + (index + 1) + "']"; // 공통된 클래스(.view_cont)와 data-id 속성값을 사용해서 선택자를 만듭니다.
+    $(this).attr("data-target", target);
+});
 $(".view_cont").each(function(index) {
   $(this).attr("data-id", index + 1);
 });
@@ -73,10 +77,19 @@ $(".pf_more").click(function() {
   var target = $(this).data("target"); // 클릭한 버튼의 data-target 속성값
   $(target).show().siblings(".view_cont").hide(); // 해당 view_cont 엘리먼트를 보이고, 다른 view_cont 엘리먼트는 숨김
   $(".pf_modal").show(); // pf_modal을 보이도록 처리
+  $('body').addClass('no_scroll')
+});
+
+$(".m_pf_more").click(function() {
+  var target = $(this).data("target"); // 클릭한 버튼의 data-target 속성값
+  $(target).show().siblings(".view_cont").hide(); // 해당 view_cont 엘리먼트를 보이고, 다른 view_cont 엘리먼트는 숨김
+  $(".pf_modal").show(); // pf_modal을 보이도록 처리
+  $('body').addClass('no_scroll')
 });
 
 $(".pf_close").click(function() {
     $(".pf_modal").hide(); // pf_modal을 숨깁니다.
+    $('body').removeClass('no_scroll')
   });
 
 //맨 위로 올라가기
