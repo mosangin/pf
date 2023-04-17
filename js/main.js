@@ -139,21 +139,3 @@
                     start: "top 60%", 
                 },
             });
-    //     }
-        
-    // });  
-function updateIndicator(entries, observer) {
-  const indicator = document.querySelector('.indicator');
-
-  entries.forEach(entry => {
-    const index = entry.target.textContent.replace('#', '');
-    const el = indicator.querySelector(`[data-index="${index}"]`);    
-    el.classList.toggle('on', entry.isIntersecting);
-  });
-}
-
-const io = new IntersectionObserver(updateIndicator);
-
-Array.from(document.querySelectorAll('.section')).forEach(box => {
-  io.observe(box);
-});

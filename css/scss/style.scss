@@ -882,11 +882,20 @@ header{
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            max-width: 940px;
+            width: 100%;
             max-height: 700px;
             height: 600px;
             padding: 60px 20px;
             background: #fff;
             border-radius: 30px;
+            @include desktop {
+               width: 90%;
+            }
+            @include mobile {
+               width: 80%;
+               height: 500px;
+            }
             & .view_cont{
                 position: relative;
                 width: 100%;
@@ -920,6 +929,12 @@ header{
                         font-size: 34px;
                         color: $fontColor;
                         font-family: "S-CoreDream-6Bold";
+                        @include tablet {
+                            font-size: 28px;
+                        }
+                        @include mobile {
+                            font-size: 24px;
+                        }
                     }
                     & a {
                         display: block;
@@ -933,6 +948,10 @@ header{
                         color: $white;
                         text-align: center;
                         font-family: "S-CoreDream-3Light";
+                        @include mobile {
+                           width: 180px;
+                           font-size: 16px;
+                        }
                     }
                     & img {
                         width: 100%;
@@ -946,6 +965,10 @@ header{
                         font-size: 21px;
                         color: $fontColor;
                         font-weight: 600;
+                        @include mobile {
+                            padding-top: 20px;
+                            font-size: 18px;
+                        }
                     }
                     & .desc{
                         width: 90%;
@@ -954,6 +977,10 @@ header{
                         color: $fontColor;
                         line-height: 1.5;
                         word-break: keep-all;
+                        @include mobile {
+                            width: 100%;
+                            font-size: 14px;
+                        }
                     }
                     & .work_info{
                         position: relative;

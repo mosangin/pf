@@ -1020,11 +1020,24 @@ header .header_inner .nav_box ul li a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 940px;
+  width: 100%;
   max-height: 700px;
   height: 600px;
   padding: 60px 20px;
   background: #fff;
   border-radius: 30px;
+}
+@media screen and (max-width: 1280px) {
+  .sub .pf_modal .modal_wrap {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .sub .pf_modal .modal_wrap {
+    width: 80%;
+    height: 500px;
+  }
 }
 .sub .pf_modal .modal_wrap .view_cont {
   position: relative;
@@ -1062,6 +1075,16 @@ header .header_inner .nav_box ul li a:hover {
   color: #1a1a1a;
   font-family: "S-CoreDream-6Bold";
 }
+@media (max-width: 768px) {
+  .sub .pf_modal .modal_wrap .view_cont .pf_title h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 480px) {
+  .sub .pf_modal .modal_wrap .view_cont .pf_title h2 {
+    font-size: 24px;
+  }
+}
 .sub .pf_modal .modal_wrap .view_cont .pf_title a {
   display: block;
   width: 200px;
@@ -1075,6 +1098,12 @@ header .header_inner .nav_box ul li a:hover {
   text-align: center;
   font-family: "S-CoreDream-3Light";
 }
+@media (max-width: 480px) {
+  .sub .pf_modal .modal_wrap .view_cont .pf_title a {
+    width: 180px;
+    font-size: 16px;
+  }
+}
 .sub .pf_modal .modal_wrap .view_cont .pf_title img {
   width: 100%;
   border: 1px solid #ddd;
@@ -1086,6 +1115,12 @@ header .header_inner .nav_box ul li a:hover {
   color: #1a1a1a;
   font-weight: 600;
 }
+@media (max-width: 480px) {
+  .sub .pf_modal .modal_wrap .view_cont .pf_info h3 {
+    padding-top: 20px;
+    font-size: 18px;
+  }
+}
 .sub .pf_modal .modal_wrap .view_cont .pf_info .desc {
   width: 90%;
   padding-top: 10px;
@@ -1093,6 +1128,12 @@ header .header_inner .nav_box ul li a:hover {
   color: #1a1a1a;
   line-height: 1.5;
   word-break: keep-all;
+}
+@media (max-width: 480px) {
+  .sub .pf_modal .modal_wrap .view_cont .pf_info .desc {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 .sub .pf_modal .modal_wrap .view_cont .pf_info .work_info {
   position: relative;
