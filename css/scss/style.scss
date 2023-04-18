@@ -713,6 +713,12 @@ header{
                 font-size: 42px;
                 color: $white;
                 font-family: "S-CoreDream-3Light";
+                @include tablet {
+                    font-size: 32px;
+                }
+                @include mobile {
+                    font-size: 21px;
+                }
             }
         }
         & p{
@@ -721,13 +727,24 @@ header{
             color: $white;
             line-height: 1.6;
             font-family: "S-CoreDream-3Light";
+            word-break: keep-all;
+            @include tablet {
+                font-size: 18px;
+            }
+            @include mobile {
+                font-size: 16px;
+            }
         }
         & .ico{
             position: absolute;
             top: 0;
             right: 20px;
             & svg{
-                fill: $white
+                fill: $white;
+                @include mobile {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
     }
@@ -743,6 +760,9 @@ header{
             font-size: 14px;
             text-align: center;
             color: $white;
+            @include mobile {
+                font-size: 12px;
+            }
         }
         & .top{
             position: absolute;
@@ -757,6 +777,10 @@ header{
                 border: 1px solid $white;
                 fill: $white;
                 opacity: .7;
+                @include mobile {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
     }
@@ -926,7 +950,7 @@ header{
             max-height: 700px;
             height: 600px;
             padding: 60px 20px;
-            background: #fff;
+            background: $white;
             border-radius: 30px;
             @include desktop {
                width: 90%;
@@ -941,9 +965,7 @@ header{
                 height: 100%;
                 overflow-y: auto;
                 -ms-overflow-style: none;
-                /* 인터넷 익스플로러 */
                 scrollbar-width: none;
-                /* 파이어폭스 */
                 &::-webkit-scrollbar{
                     width: 3px;
                 }
@@ -959,6 +981,7 @@ header{
                     right: 2%;
                     & span{
                         font-size: 42px;
+                        color: $fontColor;
                         @include mobile {
                             font-size: 34px;
                         }

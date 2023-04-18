@@ -791,12 +791,33 @@ header .header_inner .nav_box ul li a:hover {
   color: #fff;
   font-family: "S-CoreDream-3Light";
 }
+@media (max-width: 768px) {
+  .contact .inner .txt_line h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .contact .inner .txt_line h2 {
+    font-size: 21px;
+  }
+}
 .contact .inner p {
   padding-top: 30px;
   font-size: 24px;
   color: #fff;
   line-height: 1.6;
   font-family: "S-CoreDream-3Light";
+  word-break: keep-all;
+}
+@media (max-width: 768px) {
+  .contact .inner p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .contact .inner p {
+    font-size: 16px;
+  }
 }
 .contact .inner .ico {
   position: absolute;
@@ -805,6 +826,12 @@ header .header_inner .nav_box ul li a:hover {
 }
 .contact .inner .ico svg {
   fill: #fff;
+}
+@media (max-width: 480px) {
+  .contact .inner .ico svg {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .footer {
@@ -818,6 +845,11 @@ header .header_inner .nav_box ul li a:hover {
   font-size: 14px;
   text-align: center;
   color: #fff;
+}
+@media (max-width: 480px) {
+  .footer .inner .copy {
+    font-size: 12px;
+  }
 }
 .footer .inner .top {
   position: absolute;
@@ -833,6 +865,12 @@ header .header_inner .nav_box ul li a:hover {
   border: 1px solid #fff;
   fill: #fff;
   opacity: 0.7;
+}
+@media (max-width: 480px) {
+  .footer .inner .top svg {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /* 포트폴리오 페이지*/
@@ -1086,9 +1124,7 @@ header .header_inner .nav_box ul li a:hover {
   height: 100%;
   overflow-y: auto;
   -ms-overflow-style: none;
-  /* 인터넷 익스플로러 */
   scrollbar-width: none;
-  /* 파이어폭스 */
 }
 .sub .pf_modal .modal_wrap .view_cont::-webkit-scrollbar {
   width: 3px;
@@ -1106,6 +1142,7 @@ header .header_inner .nav_box ul li a:hover {
 }
 .sub .pf_modal .modal_wrap .view_cont button span {
   font-size: 42px;
+  color: #1a1a1a;
 }
 @media (max-width: 480px) {
   .sub .pf_modal .modal_wrap .view_cont button span {
