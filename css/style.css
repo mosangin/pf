@@ -199,6 +199,7 @@ header .header_inner .nav_box ul li a:hover {
   position: relative;
   overflow: hidden;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: #fff;
 }
 .visual .inner .visual_txt {
@@ -780,7 +781,10 @@ header .header_inner .nav_box ul li a:hover {
 
 .contact {
   padding: 80px 0;
-  background: #39594f;
+  background: #454545;
+}
+.contact .inner {
+  position: relative;
 }
 .contact .inner .txt_line h2 {
   font-size: 42px;
@@ -793,6 +797,42 @@ header .header_inner .nav_box ul li a:hover {
   color: #fff;
   line-height: 1.6;
   font-family: "S-CoreDream-3Light";
+}
+.contact .inner .ico {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+.contact .inner .ico svg {
+  fill: #fff;
+}
+
+.footer {
+  padding: 20px 0 40px 0;
+  background: #454545;
+}
+.footer .inner {
+  position: relative;
+}
+.footer .inner .copy {
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+.footer .inner .top {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 21px;
+}
+.footer .inner .top svg {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  fill: #fff;
+  opacity: 0.7;
 }
 
 /* 포트폴리오 페이지*/
@@ -1014,6 +1054,7 @@ header .header_inner .nav_box ul li a:hover {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 666;
 }
 .sub .pf_modal .modal_wrap {
   position: absolute;
@@ -1065,6 +1106,11 @@ header .header_inner .nav_box ul li a:hover {
 }
 .sub .pf_modal .modal_wrap .view_cont button span {
   font-size: 42px;
+}
+@media (max-width: 480px) {
+  .sub .pf_modal .modal_wrap .view_cont button span {
+    font-size: 34px;
+  }
 }
 .sub .pf_modal .modal_wrap .view_cont .pf_title {
   text-align: center;

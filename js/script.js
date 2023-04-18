@@ -1,4 +1,7 @@
 $(function () {
+  //ios 100vh
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 
   //스크롤시 header
   var fixedHeader = 300;
@@ -33,7 +36,7 @@ $(function () {
     }
   });
 
-   ////menu click
+   //menu click
   gsap.registerPlugin(ScrollTrigger);
    menuMo = gsap.timeline({
             defaults:{
@@ -44,7 +47,7 @@ $(function () {
       e.preventDefault();
 
       trgt = $(this).data('target');
-      trgtOffset = $(trgt).offset().top;
+      trgtOffset = $(trgt).offset().top-70;
 
       // 햄버거 메뉴 클릭시 navbox 닫히면서 이동
       menuMo.reverse();
