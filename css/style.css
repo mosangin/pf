@@ -862,9 +862,9 @@ header .header_inner .nav_box ul li a:hover {
 .footer .inner .top svg {
   width: 40px;
   height: 40px;
-  border: 1px solid #fff;
+  border: 1px solid #999;
   fill: #fff;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 @media (max-width: 480px) {
   .footer .inner .top svg {
