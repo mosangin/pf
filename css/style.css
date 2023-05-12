@@ -801,7 +801,7 @@ header .header_inner .nav_box ul li a:hover {
     font-size: 21px;
   }
 }
-.contact .inner p {
+.contact .inner .contact_txt {
   padding-top: 30px;
   font-size: 24px;
   color: #fff;
@@ -810,12 +810,13 @@ header .header_inner .nav_box ul li a:hover {
   word-break: keep-all;
 }
 @media (max-width: 768px) {
-  .contact .inner p {
+  .contact .inner .contact_txt {
     font-size: 18px;
   }
 }
 @media (max-width: 480px) {
-  .contact .inner p {
+  .contact .inner .contact_txt {
+    width: 75%;
     font-size: 16px;
   }
 }
@@ -832,6 +833,28 @@ header .header_inner .nav_box ul li a:hover {
     width: 30px;
     height: 30px;
   }
+}
+.contact .inner .info {
+  padding-top: 40px;
+}
+.contact .inner .info p {
+  display: flex;
+  align-items: center;
+}
+.contact .inner .info p:first-child {
+  padding-bottom: 10px;
+}
+.contact .inner .info p svg {
+  width: 30px;
+  height: 30px;
+}
+.contact .inner .info p span {
+  display: block;
+  padding-left: 20px;
+  font-size: 21px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: "S-CoreDream-3Light";
 }
 
 .footer {

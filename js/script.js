@@ -1,4 +1,5 @@
 $(function () {
+
   //ios 100vh
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -79,42 +80,28 @@ $(".view_cont").each(function(index) {
 $(".pf_more").click(function() {
   var target = $(this).data("target"); // 클릭한 버튼의 data-target 속성값
   $(target).show().siblings(".view_cont").hide(); // 해당 view_cont 엘리먼트를 보이고, 다른 view_cont 엘리먼트는 숨김
-  $(".pf_modal").show(); // pf_modal을 보이도록 처리
+  $(".pf_modal").show(); 
   $('body').addClass('no_scroll')
 });
 
 $(".m_pf_more").click(function() {
-  var target = $(this).data("target"); // 클릭한 버튼의 data-target 속성값
-  $(target).show().siblings(".view_cont").hide(); // 해당 view_cont 엘리먼트를 보이고, 다른 view_cont 엘리먼트는 숨김
-  $(".pf_modal").show(); // pf_modal을 보이도록 처리
+  var target = $(this).data("target"); 
+  $(target).show().siblings(".view_cont").hide(); 
+  $(".pf_modal").show(); 
   $('body').addClass('no_scroll')
 });
 
 $(".pf_close").click(function() {
-    $(".pf_modal").hide(); // pf_modal을 숨깁니다.
+    $(".pf_modal").hide(); 
     $('body').removeClass('no_scroll')
   });
 
-//맨 위로 올라가기
-var sa = 700;
-//스크롤 기본폼 window기억!
-$(window).scroll(function () {
-  var num = $("html,body").scrollTop();
-  console.log(num);
-  if (num > sa) {
-    $(".scroll_show").fadeIn();
-  } else {
-    $(".scroll_show").fadeOut();
-  }
-});
+// scroll Top
 $(".top").click(function (e) {
   $("html,body").stop().animate({ scrollTop: 0 }, 1000, "swing");
   e.preventDefault();
 });
 
-
-
-//스크롤할때 자연스럽게
 AOS.init();
 
 
